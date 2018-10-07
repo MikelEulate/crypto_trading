@@ -31,7 +31,7 @@ drawdown = {}        # Draw down at the time of entry
 shares = {}
 
 
-chat = 12611672
+chat = 0
 
 
 
@@ -231,9 +231,10 @@ def drawdown_calc(xs):
 
 
 ## Crypto Telegram Bot
+# Set your token and the url to send messages to your telegram bot:
 
-TOKEN = "629326723:AAHfDJ7wgeVxUKX7U8ntrj1lNXhXcq9A2v0"
-URL = "https://api.telegram.org/bot{}/".format(TOKEN)
+TOKEN = ""
+URL = ""
 
 
 def get_url(url):
@@ -302,7 +303,7 @@ if __name__ == '__main__':
         
         i = i +1
         if i % 12 == 0:
-            df_hist.to_csv('/home/pi/CRYPTO_TRADING/data/crypto_data_trend_follow_algo.csv')
+            df_hist.to_csv('crypto_data_trend_follow_algo.csv')
         
         s = (datetime.datetime.now() - k).seconds
         time.sleep(3600-int(s))
