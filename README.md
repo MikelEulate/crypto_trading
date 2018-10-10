@@ -1,4 +1,4 @@
-# crypto_trading
+# Crypto Trading
 Cryptocurrencies algorithmic trading strategies
 
 ## Momentum algo:
