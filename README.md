@@ -13,4 +13,6 @@ trend_follow_algo.py
 stat_arb.py
 
 
-* NOTE: If you want to make them to work live you will need to write the functions to send those trades to the exchange instead of sending the messages to your Telegram bot.
+
+
+*NOTE: If you want to make them to work live you will need to write the functions to send those trades to the exchange instead of sending the messages to your Telegram bot.
