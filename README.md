@@ -11,7 +11,11 @@ The scritp that makes this strategy is: trend_follow_algo.py.
 
 The basics of this strategy is that if one asset (crypto) is going up (or down) it will keep going up (down) for the next periods. We don't know how many periods the asset will keep going up (or down), but as a rule of thumb if a tendency is bigger then it will last more time that one that is more flat. 
 
-So with that on mind, we code a trend following algorithm that computes a regression of the previous 12 data closing prices of the asset and if the slope of this regression line is greather than a value, and the last close price is lower the line (but not lower than the maximum drowdawn expected) we will buy that asset expecting it to maintain the tendency and its momentum. If later the slope of the regression line strarts dectrease and is going to zero we exit the trade. To profit taking we expect to exit the trade at the upper  Bollinger Band (if we are on a long trade) or in the lower Bollinger Band (if we are on a short trade)
+So with that on mind, we code a trend following algorithm that computes a regression of the previous 12 data closing prices of the asset and if:
+
+* Bullish asset: the slope of this regression line is greather than a value, and the last close price is below  the line (but not more than the maximum drowdawn expected) we will buy that asset expecting it to maintain the tendency and its momentum. If later the slope of the regression line strarts decrease and is going to zero we exit the trade. To profit taking we expect to exit the trade at the upper  Bollinger Band. 
+
+* Bearish asset: the slope of this regression line is lower than a value, and the last close price is higher the line (but not more than the maximum drowdawn expected) we will sell that asset expecting it to maintain the tendency and its momentum. If later the slope of the regression line strarts decrease and is going to zero we exit the trade. To profit taking we expect to exit the trade atthe lower Bollinger Band.
 
 ## Statistical Arbitrage algo:
 stat_arb.py
