@@ -28,3 +28,13 @@ def binance_hist_symbols(list_symbols, interval, limit= 12):
         df[f'{symbol}_low']= low
         df[f'{symbol}_close']= close
     return df
+
+
+def binance_last_price(symbol): 
+    try: 
+        # https://github.com/binance-exchange/binance-official-api-docs/blob/master/rest-api.md
+        # Get tick by tick data of last price from Binance
+        binanceTick = requests.get('https://api.binance.com/api/v3/ticker/price?symbol='+symbol)
+        return float(binanceTick.json()['price'])
+    except:
+        return 0
