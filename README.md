@@ -17,10 +17,20 @@ So with that on mind, we code a trend following algorithm that computes a regres
 
 * Bearish asset: the slope of this regression line is lower than a value, and the last close price is higher the line (but not more than the maximum drowdawn expected) we will sell that asset expecting it to maintain the tendency and its momentum. If later the slope of the regression line strarts decrease and is going to zero we exit the trade. To profit taking we expect to exit the trade atthe lower Bollinger Band.
 
+### Running the script:
+"""
+$ python trend_follow_algo.py
+"""
+
 ## Statistical Arbitrage algo:
-stat_arb.py
+The scritp that makes this strategy is: stat_arb.py
+
+The basics of this strategy is that it is possible that the same asset can have different prices among crypto exchanges. The idea is to buy the asset in the exchange where the price is higher and sell the same asset into the exchange whith the lower price. The idea is similar to a pairs trade. We short the difference between prices expecting it to mean reverse and close the trade when the higher price exchange is now below the other exchange price.
 
 
-
+### Running the script:
+"""
+$ python stat_arb.py
+"""
 
 *NOTE: If you want to make them to work live you will need to write the functions to send those trades to the exchange instead of sending the messages to your Telegram bot.
