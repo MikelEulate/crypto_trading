@@ -1,4 +1,4 @@
-# Crypto Trading
+# Crypto Trading Strategies
 In this repository we will try several cryptocurrencies algorithmic trading strategies. All this strategies are real time ones but without sending the trades to an exchange*. There is an option to set a Telgram bot to send you messages to your Telegram account for trades executed and equity balance information. 
 
 The different strategies tried are:
