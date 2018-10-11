@@ -34,5 +34,7 @@ The basics of this strategy is that it is possible that the same asset can have 
 ```
 & python stat_arb.py
 ```
+# Helper function: get_crypto_data
+Functions for retrieving crypto data last price or historical prices. Run the functions depending the data you need.
 
 *NOTE: If you want to make them to work live you will need to write the functions to send those trades to the exchange instead of sending the messages to your Telegram bot.
