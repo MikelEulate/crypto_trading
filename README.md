@@ -32,11 +32,11 @@ The basics of this strategy is that it is possible that the same asset can have 
 ### Running the script:
 
 ```
-& python stat_arb.py
+$ python stat_arb.py
 ```
 
 #### 
 NOTE:Helper function: get_crypto_data_ohcl.py
 Functions for retrieving crypto data last price or historical prices. Run the functions depending the data you need.
 
-* If you want to make them to work live you will need to write the functions to send those trades to the exchange instead of sending the messages to your Telegram bot.
+*If you want to make them to work live you will need to write the functions to send those trades to the exchange instead of sending the messages to your Telegram bot.
