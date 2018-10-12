@@ -26,7 +26,7 @@ $ python trend_follow_algo.py
 ## Statistical Arbitrage algo:
 The scritp that makes this strategy is: stat_arb.py
 
-The basics of this strategy is that it is possible that the same asset can have different prices among crypto exchanges. The idea is to buy the asset in the exchange where the price is higher and sell the same asset into the exchange whith the lower price. The idea is similar to a pairs trade. We short the difference between prices expecting it to mean reverse and close the trade when the higher price exchange is now below the other exchange price.
+The basics of this strategy is that it is possible that the same asset can have different prices among crypto exchanges. The idea is to buy the asset in the exchange where the price is lower and sell the same asset into the exchange whith the higher price. The idea is similar to a pairs trade. We short the difference between prices expecting it to mean reverse and close the trade when the higher price exchange is now below the other exchange price.
 
 
 ### Running the script:
