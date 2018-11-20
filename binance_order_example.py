@@ -19,12 +19,12 @@ if signal and orders:
 		currency_price = get_last_price(crypto)
 		number_currencies_to_trade = size_per_currency/currency_price
 		order = client.order_market_buy(
-    		symbol=crypto,
-    		quantity=number_currencies_to_trade)
+    			symbol=crypto,
+    			quantity=number_currencies_to_trade)
 	if signal is a sell:
 		# Calculate position sizing
 		currency_price = get_last_price(crypto)
 		number_currencies_to_trade = size_per_currency/currency_price
 		order = client.order_market_sell(
-    		symbol=crypto,
-    		quantity=number_currencies_to_trade)
+    			symbol=crypto,
+    			quantity=number_currencies_to_trade)
