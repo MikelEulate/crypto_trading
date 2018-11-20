@@ -17,14 +17,35 @@ if signal and orders:
 	if signal is a buy:
 		# Calculate position sizing
 		currency_price = get_last_price(crypto)
-		number_currencies_to_trade = size_per_currency/currency_price
-		order = client.order_market_buy(
-    			symbol=crypto,
-    			quantity=number_currencies_to_trade)
+		## If the base currency is USDT:
+		if crypto[-4:] == 'USDT':
+			number_currencies_to_trade = size_per_currency/currency_price
+			order = client.order_market_buy(
+	    			symbol=crypto,
+	    			quantity=number_currencies_to_trade)
+
+		## If the base currency is BTC:
+		if crypto[-3:] == 'BTC':
+			bitcoin_last_price = get_las_price('BTCUSDT')
+			number_currencies_to_trade = size_per_currency/(currency_price*bitcoin_last_price)
+			order = client.order_market_buy(
+	    			symbol=crypto,
+	    			quantity=number_currencies_to_trade)
+
 	if signal is a sell:
 		# Calculate position sizing
 		currency_price = get_last_price(crypto)
-		number_currencies_to_trade = size_per_currency/currency_price
-		order = client.order_market_sell(
-    			symbol=crypto,
-    			quantity=number_currencies_to_trade)
+		## If the base currency is USDT:
+		if crypto[-4:] == 'USDT':
+			number_currencies_to_trade = size_per_currency/currency_price
+			order = client.order_market_sell(
+	    			symbol=crypto,
+	    			quantity=number_currencies_to_trade)
+
+		## If the base currency is BTC:
+		if crypto[-3:] == 'BTC':
+			bitcoin_last_price = get_las_price('BTCUSDT')
+			number_currencies_to_trade = size_per_currency/(currency_price*bitcoin_last_price)
+			order = client.order_market_sell(
+	    			symbol=crypto,
+	    			quantity=number_currencies_to_trade)
